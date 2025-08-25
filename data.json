@@ -1,0 +1,16 @@
+{
+  "about": "Hello! I'm Mehdi, a Computer Engineering student passionate about data science, machine learning, and algorithms.",
+  "projects": [
+    {
+      "title": "Credit Risk Modeling",
+      "description": "Developed a machine learning model to predict credit risk using historical financial data.",
+      "tech": ["Python", "scikit-learn", "pandas"],
+      "link": "https://github.com/mehdi-jafarov/SBA-Approve-Or-Deny-Loan.git"
+    }
+  ],
+  "contact": {
+    "github": "https://github.com/mehdi-jafarov",
+    "email": "contact.mehdijafarov@gmail.com"
+  },
+  "quote": "The best way to predict the future is to invent it. - Alan Kay"
+}
