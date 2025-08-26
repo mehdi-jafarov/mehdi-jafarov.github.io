@@ -84,7 +84,7 @@ blockquote {
 }
 
 /* Dark Mode */
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: dark) {
   body {
     background: #1b1a17;
     color: #e5e3dd;
