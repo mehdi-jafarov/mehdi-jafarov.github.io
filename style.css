@@ -78,7 +78,7 @@ aside {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 0.8em;
+  flex-wrap: wrap;
 }
 .project-footer .button {
   display: inline-block;
