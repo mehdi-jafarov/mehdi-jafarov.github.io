@@ -37,7 +37,6 @@ hr {
 
 #about p {
   text-align: justify;
-  /* text-align-last: justify; */
   hyphens: auto;
 }
 #about p:first-letter {
@@ -45,19 +44,54 @@ hr {
   font-weight: bold;
 }
 
+
 .project-card {
-  padding: 0.5em 0.5em 0.5em 0;
-  margin-bottom: 0.5em;
+  background: #faf9f6;
+  border-radius: 8px;
+  padding: 1em 1.2em;
+  margin-bottom: 1.2em;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.10);
+  transition: box-shadow 0.2s ease;
 }
+
+.project-card:hover {
+  box-shadow: 0 6px 16px rgba(0,0,0,0.14); 
+}
+
+.project-card strong {
+  font-size: 1.1em;
+  display: block;
+}
+.project-category {
+  display: block;
+  font-size: 0.9em;
+  color: #555;
+  margin-bottom: 0.4em;
+}
+.project-card p {
+  margin: 0.5em 0;
+  font-size: 0.95em;
+  line-height: 1.4;
+  text-align: justify;
+  hyphens: auto;
+}
+
 .tag {
-  display: inline-table;
+  display: inline-block;
   font-family: monospace;
-  background: #f2f1ed;
-  margin: 15px 8px 15px 0;
-  font-size: 0.85em;
+  background: #eae7df;
+  margin: 10px 5px 10px 0;
+  font-size: 0.8em;
   padding: 0 4px;
   border-radius: 4px;
   color: #333;
+}
+
+.project-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.8em;
 }
 
 ul {
@@ -83,6 +117,7 @@ blockquote {
   font-style: italic;
 }
 
+
 /* Dark Mode */
 @media (prefers-color-scheme: dark) {
   body {
@@ -94,9 +129,19 @@ blockquote {
     color: #f3f2ec;
   }
 
-  aside {
+  aside, blockquote, .project-category{
     color: #a5a59c;
   }
+
+  .project-card {
+    background: #22211d;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    transition: box-shadow 0.2s ease;
+
+  }
+  .project-card:hover {
+    box-shadow: 0 6px 16px rgba(0,0,0,0.6); 
+}
 
   hr {
     border-top: 1px solid #2c2c2c;
@@ -104,7 +149,8 @@ blockquote {
 
   .tag {
     background: #2a2925;
-    color: #dcd8d0;
+    /* color: #dcd8d0; */
+    color: #c8c5bd;
   }
 
   a {
@@ -114,9 +160,5 @@ blockquote {
   a:hover {
     color: #9bcaf2;
     text-decoration: none;
-  }
-
-  blockquote {
-    color: #a5a59c;
   }
 }
