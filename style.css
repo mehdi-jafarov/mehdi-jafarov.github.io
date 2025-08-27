@@ -161,11 +161,6 @@ blockquote {
   }
 
   .project-footer .button {
-    /* background: #3a3934;  
-    background: #2a2925;
-    color: #e5e3dd;
-    color: #dcd8d0; */
-
     background: #3a3934;
     color: #dcd8d0;
     transition: background 0.2s ease, color 0.2s ease;
@@ -177,8 +172,6 @@ blockquote {
   }
 
   .tag {
-    /* background: #2a2925; */
-    /* color: #c8c5bd; */
     background: #3a3934;
     color: #dcd8d0;
   }
@@ -192,3 +185,56 @@ blockquote {
     text-decoration: none;
   }
 }
+
+/* Mobile Overrides */
+@media (max-width: 480px) {
+  body {
+    margin: 20px auto;
+    width: 100%;
+    padding: 0 16px;
+    font-size: 17px;
+    line-height: 1.6;
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+  h2 {
+    font-size: 1.3em;
+  }
+
+  section {
+    margin-top: 1.5em;
+  }
+  
+  .project-footer .button {
+    padding: 7px 15px;
+    font-size: 0.9em;
+    color: #2a2925;
+    background-color: #dcd8d0; 
+    border: 1px solid transparent; 
+  }
+  .project-footer .button:hover {
+    background: #e5e2da;
+    border: 1px solid #2a2925;
+  }
+
+  .tag {
+    padding: 2px 6px;
+    font-size: 0.85em;
+  }
+}
+
+/* Mobile overrides on dark mode */
+@media (max-width: 480px) and (prefers-color-scheme: dark) {
+  .project-footer .button {
+    background-color: #4a4943;
+    color: #f0eee8;
+    border: 1px solid transparent;
+  }
+  .project-footer .button:hover {
+    background: #5a5952;
+    border: 1px solid #e5e3dd;
+  }
+}
+
