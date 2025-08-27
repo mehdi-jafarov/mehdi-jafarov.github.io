@@ -1,3 +1,7 @@
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
 /* Base Styles */
 body {
   margin: 40px auto;
@@ -216,7 +220,7 @@ blockquote {
     align-self: stretch; 
     text-align: center;
     padding: 10px 0;
-    font-size: 0.95em;
+    font-size: 16px;
     color: #2a2925;
     background-color: #dcd8d0; 
     border: 1px solid transparent; 
