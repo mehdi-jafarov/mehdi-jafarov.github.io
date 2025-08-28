@@ -105,7 +105,6 @@ h1, h2, h3 {
   font-family: monospace;
   padding: 5px;
   font-size: 0.85em;
-  /* color: #008b13; */
   font-weight: 500;
 }
 
@@ -183,7 +182,6 @@ footer p {
     flex-direction: column;
     gap: 0.9em;
     max-width: 100%;
-    /* margin-top: 1rem; */
   }
 }
 
@@ -203,13 +201,13 @@ footer p {
 
   #about-container {
     grid-template-columns: 1fr;
-    gap: 0.1em;   
+    gap: 0.5em;   
   }
 
   #prediction-form {
     display: grid;               
     grid-template-columns: 1fr 1fr;
-    gap: 0.6em;
+    gap: 0.5em;
     width: 100%;
     max-width: none;
     /* margin-top: 0.5rem; */
@@ -217,6 +215,8 @@ footer p {
 
   #prediction-form button {
     width: 100%;
+    margin-top: 0;
+
   }
 
   #prediction-form input:nth-of-type(1) { grid-column: 1; } /* Loan Amount */
@@ -227,6 +227,7 @@ footer p {
   #prediction-form .status {
     grid-column: 1 / -1;
     justify-self: center;
+    margin-top: 5px;
   }
 }
 
