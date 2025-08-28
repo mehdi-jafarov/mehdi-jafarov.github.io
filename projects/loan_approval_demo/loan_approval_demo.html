@@ -4,11 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, user-scalable=no">
   <title>Loan Approval Demo - Mehdi Jafarov</title>
-  <meta name="author" content="Mehdi Jafarov">
-  <meta name="description" content="Loan Approval Demo - Mehdi Jafarov">
-  <link rel="shortcut icon" href="img/favicon.svg" type="image/x-icon">
   <link rel="stylesheet" href="loan_approval_demo_style.css">
-  <!-- ONNX Runtime Web -->
   <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/ort.min.js"></script>
 </head>
 <body>
@@ -22,17 +18,16 @@
       </p>
     </div>
 
-    <!-- Prediction Form -->
     <form id="prediction-form">
-      <input type="number" placeholder="Loan Amount Requested">
-      <input type="number" placeholder="SBA Guaranteed Portion">
-      <select>
+      <input id="loanAmt" type="number" placeholder="Loan Amount Requested" step="0.01">
+      <input id="sbaPortion" type="number" placeholder="SBA Guaranteed Portion" step="0.01">
+      <select id="realEstate">
         <option value="">Real Estate Company?</option>
-        <option value="Yes">Yes</option>
-        <option value="No">No</option>
+        <option value="1">Yes</option>
+        <option value="0">No</option>
       </select>
       <button type="submit">Predict</button>
-      <span class="status">Status</span>
+      <span class="status" id="status">Status</span>
     </form>
   </section>
 </main>
@@ -41,5 +36,66 @@
   <hr>
   <p style="font-size: 0.85em; color: #777;">© 2025 Mehdi Jafarov</p>
 </footer>
+
+<script>
+const form = document.getElementById("prediction-form");
+const statusEl = document.getElementById("status");
+let session;
+
+// Load ONNX model
+(async () => {
+  try {
+    session = await ort.InferenceSession.create("models/sba_sk_logreg.onnx");
+    console.log("ONNX model loaded");
+  } catch (err) {
+    console.error("Failed to load ONNX model:", err);
+    statusEl.innerText = "⚠️ Failed to load model";
+  }
+})();
+
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  // Parse input numbers and remove any $ or commas
+  const loanAmt = parseFloat(document.getElementById("loanAmt").value.replace(/[$,]/g,""));
+  const sbaPortion = parseFloat(document.getElementById("sbaPortion").value.replace(/[$,]/g,""));
+  const realEstate = parseInt(document.getElementById("realEstate").value);
+
+  if (isNaN(loanAmt) || isNaN(sbaPortion) || ![0,1].includes(realEstate) || loanAmt === 0) {
+    statusEl.innerText = "⚠️ Please enter valid values.";
+    return;
+  }
+
+  // Compute Portion and recession
+  const portion = sbaPortion / loanAmt;
+  const recession = 0.0;
+
+  // DEBUG: log inputs
+  console.log("=== DEBUG INPUTS ===");
+  console.log("Loan Amount:", loanAmt);
+  console.log("SBA Portion:", sbaPortion);
+  console.log("RealEstate:", realEstate);
+  console.log("Portion:", portion);
+  console.log("Recession:", recession);
+
+  // Prepare input tensor
+  const feeds = {
+    float_input: new ort.Tensor("float32", Float32Array.from([realEstate, portion, recession]), [1,3])
+  };
+
+  try {
+    const results = await session.run(feeds);
+    const outputKey = Object.keys(results)[0];
+    const label = Number(results[outputKey].data[0]); // Read class label directly
+    console.log("Predicted class label:", label);
+
+    // Only show Approved or Denied
+    statusEl.innerText = label === 0 ? "✅ Approved" : "❌ Denied";
+  } catch (err) {
+    console.error("ONNX inference error:", err);
+    statusEl.innerText = "⚠️ Model inference failed";
+  }
+});
+</script>
 </body>
 </html>

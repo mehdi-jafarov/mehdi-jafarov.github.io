@@ -216,7 +216,6 @@ footer p {
   #prediction-form button {
     width: 100%;
     margin-top: 0;
-
   }
 
   #prediction-form input:nth-of-type(1) { grid-column: 1; } /* Loan Amount */
