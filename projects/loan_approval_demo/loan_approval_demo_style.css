@@ -105,7 +105,7 @@ h1, h2, h3 {
   font-family: monospace;
   padding: 5px;
   font-size: 0.85em;
-  color: #008b13;
+  /* color: #008b13; */
   font-weight: 500;
 }
 
@@ -160,9 +160,8 @@ footer p {
     border: 1px solid #22211d;
   }
 }
-
-/* ---------- Mobile ---------- */
-@media (max-width: 480px) {
+/* ---------- Mobile (≤480px): vertical stacked form ---------- */
+@media (max-width: 660px) {
   body {
     margin: 20px auto;
     width: 100%;
@@ -171,19 +170,66 @@ footer p {
     font-size: clamp(16px, 4vw, 20px);
   }
 
-  h1 {
-    font-size: 1.8em;
-  }
-  h2 {
-    font-size: 1.3em;
-  }
+  h1 { font-size: 1.8em; }
+  h2 { font-size: 1.3em; }
 
   #about-container {
     grid-template-columns: 1fr;
+    gap: 0.1em;   
   }
 
   #prediction-form {
+    display: flex;               /* stacked */
+    flex-direction: column;
+    gap: 0.9em;
     max-width: 100%;
-    margin-top: 1rem;
+    /* margin-top: 1rem; */
   }
 }
+
+
+/* ---------- Medium (481px–660px): 2×2 grid form ---------- */
+@media (max-width: 660px) and (min-width: 481px) {
+  body {
+    margin: 20px auto;
+    width: 100%;
+    padding: 0 16px;
+    line-height: 1.6;
+    font-size: clamp(16px, 4vw, 20px);
+  }
+
+  h1 { font-size: 1.8em; }
+  h2 { font-size: 1.3em; }
+
+  #about-container {
+    grid-template-columns: 1fr;
+    gap: 0.1em;   
+  }
+
+  #prediction-form {
+    display: grid;               
+    grid-template-columns: 1fr 1fr;
+    gap: 0.6em;
+    width: 100%;
+    max-width: none;
+    /* margin-top: 0.5rem; */
+  }
+
+  #prediction-form button {
+    width: 100%;
+  }
+
+  #prediction-form input:nth-of-type(1) { grid-column: 1; } /* Loan Amount */
+  #prediction-form input:nth-of-type(2) { grid-column: 2; } /* SBA Portion */
+  #prediction-form select              { grid-column: 1; } /* Real Estate */
+  #prediction-form button              { grid-column: 2; justify-self: end; } /* bottom-right */
+
+  #prediction-form .status {
+    grid-column: 1 / -1;
+    justify-self: center;
+  }
+}
+
+
+
+

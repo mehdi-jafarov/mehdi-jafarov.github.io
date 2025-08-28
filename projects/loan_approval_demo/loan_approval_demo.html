@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <title>Loan Approval Demo - Mehdi Jafarov</title>
+  <meta name="author" content="Mehdi Jafarov">
+  <meta name="description" content="Loan Approval Demo - Mehdi Jafarov">
+  <link rel="shortcut icon" href="img/favicon.svg" type="image/x-icon">
+  <link rel="stylesheet" href="loan_approval_demo_style.css">
+  <!-- ONNX Runtime Web -->
+  <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/ort.min.js"></script>
+</head>
+<body>
+<main role="main">
+  <h2>Loan Approval Demo</h2>
+
+  <section id="about-container">
+    <div id="about">
+      <p>
+        This model is a simplified demonstration, not a production-level system. It was built for practice and to showcase predictive analytics. In this case, the model tends to favor loans secured by real estate, as historical SBA data suggested such loans carried lower risk. The goal here is to highlight the process of building and applying a predictive model, rather than to provide final, deployable decisions.
+      </p>
+    </div>
+
+    <!-- Prediction Form -->
+    <form id="prediction-form">
+      <input type="number" placeholder="Loan Amount Requested">
+      <input type="number" placeholder="SBA Guaranteed Portion">
+      <select>
+        <option value="">Real Estate Company?</option>
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
+      <button type="submit">Predict</button>
+      <span class="status">Status</span>
+    </form>
+  </section>
+</main>
+
+<footer>
+  <hr>
+  <p style="font-size: 0.85em; color: #777;">© 2025 Mehdi Jafarov</p>
+</footer>
+</body>
+</html>

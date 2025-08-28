@@ -3,6 +3,7 @@
 *::after {
   box-sizing: border-box;
 }
+
 /* Base Styles */
 body {
   margin: 40px auto;
@@ -197,8 +198,10 @@ blockquote {
   }
 }
 
-/* Mobile Overrides */
-@media (max-width: 480px) {
+/* ========================= */
+
+/* Tablet / small desktop (≤900px): side by side full width */
+@media (max-width: 540px) {
   body {
     margin: 20px auto;
     width: 100%;
@@ -217,25 +220,42 @@ blockquote {
   section {
     margin-top: 2em;
   }
-  
+
   .project-footer {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .project-footer .buttons {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
     gap: 10px;
   }
-  .project-footer .buttons {
-    flex-direction: column;
-    width: 100%;
-    gap: 8px;
-  }
+
   .project-footer .button {
-    width: 100%;
+    flex: 1; /* equal widths */
     padding: 10px 0;
     font-size: 16px;
+    text-align: center;
   }
 
   .tag {
     padding: 2px 6px;
     font-size: 0.85em;
+  }
+}
+
+/* Phones (≤540px): stack vertically */
+@media (max-width: 480px) {
+  .project-footer .buttons {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .project-footer .button {
+    width: 100%;
   }
 }
