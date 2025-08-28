@@ -1,0 +1,189 @@
+/* ---------- Reset & base ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 40px auto;
+  max-width: 650px;
+  font-size: 20px;
+  line-height: 1.65;
+  font-family: "Times New Roman", Times, serif;
+  color: #2b2b2b;
+  background-color: #fdfcf8;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1; /* footer stays at bottom */
+}
+
+section {
+  margin-top: 2em;
+  padding-bottom: 0.1em;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  max-width: 650px;
+}
+
+h1, h2, h3 {
+  line-height: 1.2;
+  color: #1a1a1a;
+}
+
+#about-container {
+  display: grid;
+  grid-template-columns: 1fr 220px; /* text + card */
+  gap: 1.5em;
+  align-items: start;
+  margin-top: 1em;
+}
+
+#about {
+  flex: 1;
+}
+
+#about p {
+  text-align: justify;
+  hyphens: auto;
+}
+
+#about p:first-letter {
+  font-size: 120%;
+  font-weight: bold;
+}
+
+/* ---------- Prediction Form ---------- */
+#prediction-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9em;
+  background: #faf9f6;
+  border-radius: 0.5em;
+  padding: 1em;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.10);
+  font-family: monospace;
+  max-width: 220px;
+}
+
+#prediction-form input,
+#prediction-form select {
+  padding: 1em 0.2em;
+  border-radius: 0.5em;
+  border: 1px solid #dcd8d0;
+  font-size: 0.7em;
+  background-color: #eae7df;
+}
+
+#prediction-form button {
+  margin-top: 0.2em;
+  display: inline-block;
+  font-family: monospace;
+  padding: 1em;
+  background-color: #dcd8d0;
+  border: 1px solid transparent;
+  border-radius: 0.5em;
+  font-size: 0.85em;
+  color: #2a2925;
+  font-weight: 500;
+  transition: background 0.2s ease, border 0.2s ease;
+}
+
+#prediction-form button:hover {
+  background: #e5e2da;
+  border: 1px solid #fdfcf8;
+}
+
+#prediction-form .status {
+  display: inline-block;
+  text-align: center;
+  font-family: monospace;
+  padding: 5px;
+  font-size: 0.85em;
+  color: #008b13;
+  font-weight: 500;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  margin-top: auto;
+}
+footer p {
+  font-size: 0.85em;
+  color: #777;
+  margin: 0;
+}
+
+/* ---------- Dark Mode ---------- */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #1b1a17;
+    color: #e5e3dd;
+  }
+
+  hr {
+    border-top: 1px solid #2c2c2c;
+  }
+
+  h1, h2, h3 {
+    color: #f3f2ec;
+  }
+
+  aside, blockquote {
+    color: #a5a59c;
+  }
+
+  #prediction-form {
+    background: #22211d;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  }
+
+  #prediction-form input,
+  #prediction-form select { 
+  background-color: #3a3934;
+  color: #e5e3dd;
+  border: 1px solid #4a4943;
+}
+
+  #prediction-form button {
+    background: #4a4943;
+    color: #e5e3dd;
+  }
+
+  #prediction-form button:hover {
+    background: #5a5952;
+    border: 1px solid #22211d;
+  }
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 480px) {
+  body {
+    margin: 20px auto;
+    width: 100%;
+    padding: 0 16px;
+    line-height: 1.6;
+    font-size: clamp(16px, 4vw, 20px);
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+  h2 {
+    font-size: 1.3em;
+  }
+
+  #about-container {
+    grid-template-columns: 1fr;
+  }
+
+  #prediction-form {
+    max-width: 100%;
+    margin-top: 1rem;
+  }
+}

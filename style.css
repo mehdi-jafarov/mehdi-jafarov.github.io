@@ -85,10 +85,9 @@ aside {
   flex-wrap: wrap;
   margin-top: 0.8em;
 }
-.project-footer .tags {
+.project-footer .buttons {
   display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
+  gap: 10px;
 }
 .project-footer .button {
   display: inline-block;
@@ -101,12 +100,18 @@ aside {
   color: #2a2925;
   font-weight: 500;
   transition: background 0.2s ease, border 0.2s ease;
+  text-align: center;
 }
 .project-footer .button:hover {
     background: #e5e2da;
     border: 1px solid #fdfcf8;
   }
 
+.project-footer .tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
 .tag {
   display: inline-block;
   font-family: monospace;
@@ -218,12 +223,15 @@ blockquote {
     align-items: flex-start;
     gap: 10px;
   }
+  .project-footer .buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
+  }
   .project-footer .button {
-    align-self: stretch; 
-    text-align: center;
+    width: 100%;
     padding: 10px 0;
     font-size: 16px;
-    margin-top: 8px;
   }
 
   .tag {
