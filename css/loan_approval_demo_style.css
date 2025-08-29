@@ -308,32 +308,29 @@ footer p {
     background: #5a5952;
     border: 1px solid #22211d;
     color: #e5e3dd;
-
   }
 }
 
-
-
 @media (max-width: 540px) {
-  /* Make links bigger and easier to tap */
+  /* Links bigger and easier to tap */
   .navbar ul li a {
     font-size: 1.1em;
     padding: 8px 0;
   }
 
-  /* Keep the nav links and button on the same row */
+  /* nav links and button on the same row */
   .navbar {
     justify-content: space-between; /* links left, button right */
-    gap: 0.5em;                     /* small gap between links and button */
+    gap: 0.5em;
   }
 
-  /* Optional: adjust the nav-action button size for mobile */
+  /* Adjust the nav-action button size for mobile */
   .nav-action .nav-button {
-    padding: 8px 14px;   /* slightly bigger for touch */
+    padding: 8px 14px;   /* bigger for touch */
     font-size: 0.95em;
   }
 
-  /* Reduce gap between links for very narrow screens */
+  /* Reduce gap between links for narrow screens */
   @media (max-width: 480px) {
     .navbar ul {
       gap: 0.8em;
