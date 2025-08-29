@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, user-scalable=no">
   <title>Loan Approval Demo - Mehdi Jafarov</title>
-  <link rel="stylesheet" href="../css/loan_approval_demo_style.css">
+  <link rel="stylesheet" href="../css/loan-approval-demo-style.css">
   <link rel="shortcut icon" href="../img/favicon.svg" type="image/x-icon">
   <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/ort.min.js"></script>
 </head>
@@ -60,7 +60,7 @@ let session;
 // Load ONNX model
 (async () => {
   try {
-    session = await ort.InferenceSession.create("../models/sba_sk_logreg.onnx");
+    session = await ort.InferenceSession.create("../models/sba-sk-logreg.onnx");
     console.log("ONNX model loaded");
   } catch (err) {
     console.error("Failed to load ONNX model:", err);
@@ -108,7 +108,7 @@ form.addEventListener("submit", async (e) => {
     statusEl.innerText = label === 0 ? "Approved" : "Denied";
   } catch (err) {
     console.error("ONNX inference error:", err);
-    statusEl.innerText = "Inference failed”";
+    statusEl.innerText = "Inference failed";
   }
 });
 </script>
