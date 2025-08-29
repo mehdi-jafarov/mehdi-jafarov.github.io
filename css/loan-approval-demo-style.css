@@ -35,7 +35,7 @@ hr {
 
 
 /* =======================
-   2. Typography
+  Typography
 ======================= */
 h1, h2, h3 {
   line-height: 1.2;
@@ -107,12 +107,17 @@ h1, h2, h3 {
   transition: background 0.2s ease, border 0.2s ease;
 }
 
+#prediction-form button:hover {
+  background: #e5e2da;
+  border: 1px solid #fdfcf8;
+}
+
 #prediction-form .status {
   display: inline-block;
   text-align: center;
   font-family: monospace;
   padding: 5px;
-  font-size: 0.85em;
+  font-size: 0.9em;
   font-weight: 500;
 }
 
@@ -135,8 +140,6 @@ footer p {
   justify-content: space-between;
   align-items: center;
   background: #fdfcf8;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
   padding: 0.6em 1em;
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
@@ -159,6 +162,10 @@ footer p {
   padding: 6px 0;
 }
 
+.navbar a:hover {
+  color: #0085cc;
+}
+
 .navbar .nav-button {
   font-family: monospace;
   font-weight: 500;
@@ -171,21 +178,6 @@ footer p {
   line-height: 1;
   transition: background 0.2s ease, border 0.2s ease;
   text-align: center;
-}
-
-
-/* =======================
-   5. States & Variants
-======================= */
-
-/* --- Hover --- */
-#prediction-form button:hover {
-  background: #e5e2da;
-  border: 1px solid #fdfcf8;
-}
-
-.navbar a:hover {
-  color: #0085cc;
 }
 
 .navbar .nav-button:hover {
