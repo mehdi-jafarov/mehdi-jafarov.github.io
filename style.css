@@ -3,10 +3,13 @@
 *::after {
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 /* Base Styles */
 body {
-  margin: 40px auto;
+  margin: 0px auto;
   max-width: 650px;
   font-size: 20px;
   line-height: 1.65;
@@ -29,7 +32,7 @@ hr {
 
 header {
   text-align: center;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
 }
 h1, h2, h3 {
   line-height: 1.2;
@@ -106,7 +109,7 @@ aside {
 .project-footer .button:hover {
     background: #e5e2da;
     border: 1px solid #fdfcf8;
-  }
+}
 
 .project-footer .tags {
   display: flex;
@@ -257,5 +260,85 @@ blockquote {
 
   .project-footer .button {
     width: 100%;
+  }
+}
+
+
+/* Navigation Bar */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(253, 252, 248, 0.85); /* light glass */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 0.6em 1em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1.5em;
+  align-items: center;
+}
+
+.navbar a {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 0.95em;
+  color: #2a2925;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  padding: 6px 0;
+}
+
+.navbar a:hover {
+  color: #0085cc;
+}
+
+/* Demo Button */
+.navbar .nav-button {
+  font-family: monospace;
+  background: rgba(220, 216, 208, 0.9);
+  border-radius: 6px;
+  border: 1px solid transparent;
+  padding: 6px 12px;   /* matches link height */
+  font-size: 0.85em;
+  line-height: 1;
+  transition: background 0.2s ease, border 0.2s ease;
+}
+
+.navbar .nav-button:hover {
+  background: rgba(229, 226, 218, 0.9);
+  border: 1px solid #fdfcf8;
+  color: #2a2925;
+}
+
+/* Dark Mode (glassmorphic) */
+@media (prefers-color-scheme: dark) {
+  .navbar {
+    background: rgba(27, 26, 23, 0.75); /* dark glass */
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  .navbar a {
+    color: #e5e3dd;
+  }
+  .navbar a:hover {
+    color: #9bcaf2;
+  }
+  .navbar .nav-button {
+    background: rgba(74,73,67,0.85);
+    color: #e5e3dd;
+  }
+  .navbar .nav-button:hover {
+    background: rgba(90,89,82,0.9);
+    border: 1px solid rgba(255,255,255,0.1);
   }
 }
