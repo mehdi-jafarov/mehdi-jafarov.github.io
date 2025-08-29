@@ -2,7 +2,7 @@
 *, *::before, *::after { box-sizing: border-box; }
 
 body {
-  margin: 40px auto;
+  margin: 0 auto;
   max-width: 650px;
   font-size: 20px;
   line-height: 1.65;
@@ -230,6 +230,114 @@ footer p {
   }
 }
 
+/* Navigation Bar */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fdfcf8; 
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 0.6em 1em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1.5em;
+  align-items: center;
+}
+
+.navbar a {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 0.95em;
+  color: #2a2925;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  padding: 6px 0;
+}
+
+.navbar a:hover {
+  color: #0085cc;
+}
+
+/* Demo Button */
+.navbar .nav-button {
+  font-family: monospace;
+  font-weight: 500;
+  background-color: #dcd8d0;
+  color: #2a2925;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  padding: 6px 12px;   /* matches link height */
+  font-size: 0.85em;
+  line-height: 1;
+  transition: background 0.2s ease, border 0.2s ease;
+  text-align: center;
+}
+
+.navbar .nav-button:hover {
+  background: #e5e2da;
+  border: 1px solid #fdfcf8;
+  color: #2a2925;
+}
+
+/* Dark Mode (glassmorphic) */
+@media (prefers-color-scheme: dark) {
+  .navbar {
+    background: #1b1a17;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  .navbar a {
+    color: #e5e3dd;
+  }
+  .navbar a:hover {
+    color: #9bcaf2;
+  }
+  .navbar .nav-button {
+    background: #4a4943;
+    color: #e5e3dd;
+  }
+  .navbar .nav-button:hover {
+    background: #5a5952;
+    border: 1px solid #22211d;
+    color: #e5e3dd;
+
+  }
+}
 
 
+
+@media (max-width: 540px) {
+  /* Make links bigger and easier to tap */
+  .navbar ul li a {
+    font-size: 1.1em;
+    padding: 8px 0;
+  }
+
+  /* Keep the nav links and button on the same row */
+  .navbar {
+    justify-content: space-between; /* links left, button right */
+    gap: 0.5em;                     /* small gap between links and button */
+  }
+
+  /* Optional: adjust the nav-action button size for mobile */
+  .nav-action .nav-button {
+    padding: 8px 14px;   /* slightly bigger for touch */
+    font-size: 0.95em;
+  }
+
+  /* Reduce gap between links for very narrow screens */
+  @media (max-width: 480px) {
+    .navbar ul {
+      gap: 0.8em;
+    }
+  }
+}
 

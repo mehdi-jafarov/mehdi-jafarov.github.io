@@ -9,6 +9,20 @@
   <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/ort.min.js"></script>
 </head>
 <body>
+  <nav class="navbar">
+    <div class="nav-links">
+      <ul>
+        <li><a href="https://mehdi-jafarov.github.io/#">Home</a></li>
+        <li><a href="https://mehdi-jafarov.github.io/#projects">Work</a></li>
+        <li><a href="https://mehdi-jafarov.github.io/#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="nav-action">
+      <a class="nav-button" href="https://github.com/mehdi-jafarov/SBA-Default-Risk-Prediction.git" target="_blank">
+        GitHub Repo
+      </a>
+    </div>
+  </nav>
 <main role="main">
   <h2>Loan Approval Demo</h2>
 
@@ -50,7 +64,7 @@ let session;
     console.log("ONNX model loaded");
   } catch (err) {
     console.error("Failed to load ONNX model:", err);
-    statusEl.innerText = "⚠️ Failed to load model";
+    statusEl.innerText = "Load Failed";
   }
 })();
 
@@ -63,7 +77,7 @@ form.addEventListener("submit", async (e) => {
   const realEstate = parseInt(document.getElementById("realEstate").value);
 
   if (isNaN(loanAmt) || isNaN(sbaPortion) || ![0,1].includes(realEstate) || loanAmt === 0) {
-    statusEl.innerText = "⚠️ Please enter valid values.";
+    statusEl.innerText = "Invalid Values";
     return;
   }
 
@@ -91,10 +105,10 @@ form.addEventListener("submit", async (e) => {
     console.log("Predicted class label:", label);
 
     // Only show Approved or Denied
-    statusEl.innerText = label === 0 ? "✅ Approved" : "❌ Denied";
+    statusEl.innerText = label === 0 ? "Approved" : "Denied";
   } catch (err) {
     console.error("ONNX inference error:", err);
-    statusEl.innerText = "⚠️ Model inference failed";
+    statusEl.innerText = "Inference failed”";
   }
 });
 </script>
