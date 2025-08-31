@@ -18,7 +18,7 @@ h1, h2, h3 {
 /* Theming for components.css*/
 .card {
     background-color: var(--bg-card);
-    box-shadow: var(--hadow-card);
+    box-shadow: var(--shadow-card);
 }
 
 .card:hover {
