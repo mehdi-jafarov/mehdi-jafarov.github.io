@@ -4,8 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, user-scalable=no">
   <title>Try It Yourself - Mehdi Jafarov</title>
-  <link rel="stylesheet" href="../css/loan-approval-demo-style.css">
+
+  <!-- Style Links -->
+  <link rel="stylesheet" href="../css/styles.min.css">
+  <!-- <link rel="stylesheet" href="../css/styles.css"> -->
   <link rel="shortcut icon" href="../img/favicon.svg" type="image/x-icon">
+
+  <!-- Onnx Runtime Link -->
   <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/ort.min.js"></script>
 </head>
 <body>
@@ -18,8 +23,8 @@
       </ul>
     </div>
     <div class="nav-action">
-      <a class="nav-button" href="https://github.com/mehdi-jafarov/SBA-Default-Risk-Prediction.git" target="_blank">
-        GitHub Repo
+      <a class="button" href="https://mehdi-jafarov.github.io/projects/loan-approval-demo.html" target="_blank">
+        Check Loan
       </a>
     </div>
   </nav>
@@ -33,7 +38,7 @@
       </p>
     </div>
 
-    <form id="prediction-form">
+    <form id="prediction-form" class="card">
       <input id="loanAmt" type="number" placeholder="Loan Amount Requested" step="0.01">
       <input id="sbaPortion" type="number" placeholder="SBA Guaranteed Portion" step="0.01">
       <select style="cursor: pointer;" id="realEstate">
@@ -41,7 +46,7 @@
         <option value="1">Yes</option>
         <option value="0">No</option>
       </select>
-      <button style="cursor: pointer;" type="submit">Predict</button>
+      <button class="button" type="submit">Predict</button>
       <span class="status" id="status">Status</span>
     </form>
   </section>

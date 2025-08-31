@@ -1,0 +1,82 @@
+/* 
+===============================
+        COLORS-DARK.CSS
+- DARK THEME COLOR VARIABLES  -
+===============================
+
+*/
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        /* Background */
+        --bg-primary: #1b1a17;       /* Body, navbar */
+        --bg-card: #22211d;          /* Card background */
+        --bg-surface:  #3a3934;       /* Tags, inputs, selects */
+        --bg-button: #4a4943;        /* Button background */
+        --bg-button-hover: #5a5952;  /* Button hover */
+
+        /* Text */
+        --text-primary: #e5e3dd;     /* Body, nav-links, buttons */
+        --text-inverse: #fdfcf8;
+        --text-tag: #e5e3dd;
+        --text-link: #6daee6;
+        --text-project-category: #a5a59c;
+        --text-blockquote: #a5a59c;
+        --text-footer: #777;
+        --text-link-hover: #9bcaf2;
+
+        /* Border */
+        --border-navbar: 1px solid rgba(255, 255, 255, 0.05);
+        --border-input: 1px solid #4a4943;
+        --border-hr: 1px solid #2c2c2c;
+        --border-button-hover: 1px solid #22211d;
+
+        /* Shadow */
+        --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.1);
+        --shadow-card-hover: 0 6px 16px rgba(0, 0, 0, 0.14);
+    }
+}
+
+/* 
+==============================================================
+            DARK THEME COLOR VARIABLES DESCRIPTIONS
+==============================================================
+                            Original
+
+Background
+    --bg-primary: #1b1a17;              body navbar 
+    --bg-card: #22211d;                 card
+    --bg-surface: #3a3934;              tags inputs selects
+    --bg-button: #4a4943;               button
+
+    Background Hover    
+    --bg-button-hover: #5a5952;         button
+
+Text
+    --text-primary: #e5e3dd;            body nav-links button
+    --text-inverse: #fdfcf8;            light text
+    --text-tag: #e5e3dd;                tag
+    --text-link: #6daee6;               links
+    --text-project-category: #a5a59c;   project-category
+    --text-blockquote: #a5a59c;         blockquote
+    --text-footer: #777;                footer
+
+    Text Hover
+    --text-link-hover: #9bcaf2;         links nav-links
+
+Border
+    --border-navbar: 1px solid rgba(255, 255, 255, 0.05);   navbar
+    --border-input: 1px solid #4a4943;                      input
+    --border-hr: 1px solid #2c2c2c;                         hr
+
+    Border Hover
+    --border-button-hover: #fdfcf8;                         button
+
+Shadow
+    --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.1);           Card
+
+    Shadow Hover
+    --shadow-card-hover: 0 6px 16px rgba(0, 0, 0, 0.14);    Card
+
+==============================================================
+*/

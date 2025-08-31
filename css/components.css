@@ -1,0 +1,74 @@
+/*
+==========================
+      COMPONENTS.CSS
+-  REUSABLE COMPONENTS   -
+
+ABOUT P
+CARD
+TAGS TAG
+INPUT SELECT
+BUTTONS, .BUTTON, <BUTTON>
+LINKS UL, LI, A 
+NAV-LINKS UL, LI, A 
+========================== 
+*/
+
+#about p {
+     text-align: justify;
+     hyphens: auto;
+}
+
+.card {
+     padding: 1em;
+     border-radius: 0.5em;
+     transition: box-shadow 0.2s ease;
+}
+
+.tags {
+     display: flex;
+     flex-wrap: wrap;
+     gap: 8px;
+}
+
+.tag {
+     display: inline-block;
+     font-family: monospace;
+     font-size: 0.8em;
+     padding: 2px 6px;
+     border-radius: 0.5em;
+     white-space: nowrap;
+}
+
+input, select {
+     padding: 1em 0.2em;
+     border-radius: 0.5em;
+     font-size: 0.7em;
+}
+
+.buttons {
+     display: flex;
+     gap: 10px;
+}
+
+.button, button {
+     transition: background 0.2s ease, border 0.2s ease;
+     font-family: monospace;
+     font-size: 0.85em;
+     font-weight: 500;
+     text-align: center;
+     border: 1px solid transparent;
+     border-radius: 0.5em;
+     cursor: pointer;
+}
+
+.links ul {
+     list-style: disc;
+}
+
+.links li {
+     margin-bottom: 0.5em;
+}
+
+.links a {
+     transition: color 0.2s ease;
+}

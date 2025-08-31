@@ -9,7 +9,7 @@ body {
   margin: 0 auto;
   max-width: 650px;
   font-size: 20px;
-  line-height: 1.65;
+  line-height: 1.55;
   font-family: "Times New Roman", Times, serif;
   color: #2b2b2b;
   background-color: #fdfcf8;
@@ -47,12 +47,6 @@ h1, h2, h3 {
   hyphens: auto;
 }
 
-#about p:first-letter {
-  font-size: 120%;
-  font-weight: bold;
-}
-
-
 /* =======================
    3. Layout: About
 ======================= */
@@ -64,7 +58,6 @@ h1, h2, h3 {
   margin-top: 1em;
 }
 
-#about { flex: 1; }
 
 
 /* =======================
@@ -243,8 +236,8 @@ footer p {
   body {
     margin: 0 auto;
     width: 100%;
-    padding: 0 16px;
-    line-height: 1.6;
+    padding: 0 20px;
+    line-height: 1.45;
     font-size: clamp(16px, 4vw, 20px);
   }
 
@@ -282,8 +275,8 @@ footer p {
   body {
     margin: 0 auto;
     width: 100%;
-    padding: 0 16px;
-    line-height: 1.6;
+    padding: 0 20px;
+    line-height: 1.45;
     font-size: clamp(16px, 4vw, 20px);
   }
 

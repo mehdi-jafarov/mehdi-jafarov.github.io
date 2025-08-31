@@ -1,0 +1,85 @@
+/*
+=================================
+       RESPONSIVE-LOAN.CSS
+- LOAN DEMO PAGE RESPONSIVENESS - 
+
+=================================
+ */
+
+
+/* --- Mobile ≤480px --- */
+@media (max-width: 480px) {
+  body {
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 20px;
+    line-height: 1.45;
+    font-size: clamp(16px, 4vw, 20px);
+  }
+
+  h1 { font-size: 1.8em; }
+  h2 { font-size: 1.3em; }
+
+  #about-container {
+    grid-template-columns: 1fr;
+    gap: 0.1em;
+  }
+
+  #prediction-form {
+    flex-direction: column;
+    gap: 0.9em;
+    max-width: 100%;
+  }
+
+  .navbar ul { gap: 0.8em; }
+  .navbar ul li a {
+    font-size: 1.1em;
+    padding: 8px 0;
+  }
+  .navbar {
+    justify-content: space-between;
+    gap: 0.5em;
+  }
+  .nav-action .nav-button {
+    padding: 8px 14px;
+    font-size: 0.95em;
+  }
+}
+
+/* --- Medium 481px–660px --- */
+@media (min-width: 481px) and (max-width: 660px) {
+  body {
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 20px;
+    line-height: 1.45;
+    font-size: clamp(16px, 4vw, 20px);
+  }
+
+  h1 { font-size: 1.8em; }
+  h2 { font-size: 1.3em; }
+
+  #about-container {
+    grid-template-columns: 1fr;
+    gap: 0.5em;
+  }
+
+  #prediction-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5em;
+    width: 100%;
+    max-width: none;
+  }
+
+  #prediction-form button {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  #prediction-form input:nth-of-type(1) { grid-column: 1; }
+  #prediction-form input:nth-of-type(2) { grid-column: 2; }
+  #prediction-form select              { grid-column: 1; }
+  #prediction-form button              { grid-column: 2; justify-self: end; }
+  #prediction-form .status             { grid-column: 1 / -1; justify-self: center; margin-top: 5px; }
+}

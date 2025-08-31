@@ -14,7 +14,7 @@ body {
   margin: 0 auto;
   max-width: 650px;
   font-size: 20px;
-  line-height: 1.65;
+  line-height: 1.6;
   font-family: "Times New Roman", Times, serif;
   color: #2b2b2b;
   background-color: #fdfcf8;
@@ -30,12 +30,6 @@ body {
 h1, h2, h3 {
   line-height: 1.2;
   color: #1a1a1a;
-}
-
-aside {
-  font-size: 0.9em;
-  color: #555;
-  letter-spacing: 0.5px;
 }
 
 section {
@@ -78,10 +72,6 @@ blockquote {
 /* =========================================================
    HEADER & ABOUT SECTION
    ========================================================= */
-header {
-  text-align: center;
-  margin-bottom: 1em;
-}
 
 #about p {
   text-align: justify;
@@ -128,6 +118,9 @@ header {
   text-align: justify;
   hyphens: auto;
 }
+
+#about { flex: 1; }
+
 
 /* =========================================================
    PROJECT FOOTER & BUTTONS

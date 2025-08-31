@@ -1,0 +1,82 @@
+/* 
+===============================
+        COLORS-LIGHT.CSS
+- LIGHT THEME COLOR VARIABLES -
+===============================
+
+*/
+
+@media (prefers-color-scheme: light) {
+    :root {
+        /* Background */
+        --bg-primary: #fdfcf8;       /* Body, navbar */
+        --bg-card: #faf9f6;          /* Card background */
+        --bg-surface: #eae7df;       /* Tags, inputs, selects */
+        --bg-button: #dcd8d0;        /* Button background */
+        --bg-button-hover: #e5e2da;  /* Button hover */
+
+        /* Text */
+        --text-primary: #2a2925;     /* Body, nav-links, buttons */
+        --text-inverse: #fdfcf8;
+        --text-tag: #333;
+        --text-link: #005fa3;
+        --text-project-category: #555;
+        --text-blockquote: #666;
+        --text-footer: #777;
+        --text-link-hover: #0085cc;
+
+        /* Border */
+        --border-navbar: 1px solid rgba(0, 0, 0, 0.08);
+        --border-input: 1px solid #dcd8d0;
+        --border-hr: 1px solid #ccc;
+        --border-button-hover: 1px solid #fdfcf8;
+
+        /* Shadow */
+        --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.1);
+        --shadow-card-hover: 0 6px 16px rgba(0, 0, 0, 0.14);
+    }
+}
+
+/* 
+==============================================================
+            LIGHT THEME COLOR VARIABLES DESCRIPTIONS
+==============================================================
+                            Original
+
+Background
+    --bg-primary: #fdfcf8;          body navbar 
+    --bg-card: #faf9f6;             card
+    --bg-surface: #eae7df;          tags inputs selects
+    --bg-button: #dcd8d0;           button
+
+    Background Hover
+    --bg-button-hover: #e5e2da;     button
+
+Text
+    --text-primary: #2a2925;        body nav-links button
+    --text-inverse: #fdfcf8;        light text
+    --text-tag: #333;               tag
+    --text-link: #005fa3;           links
+    --text-project-category: #555;  project-category
+    --text-blockquote: #666;        blockquote
+    --text-footer: #777;            footer
+
+    Text Hover
+    --text-link-hover: #0085cc;     links nav-links
+
+Border
+    --border-navbar: 1px solid rgba(0, 0, 0, 0.08);      navbar
+    --border-input: 1px solid #dcd8d0;                   input
+    --border-hr: 1px solid #ccc;                         hr
+
+    Border Hover
+    --border-button-hover: 1px solid #fdfcf8;            button
+
+Shadow
+    --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.1);        Card
+
+    Shadow Hover
+    --shadow-card-hover: 0 6px 16px rgba(0, 0, 0, 0.14); Card
+
+==============================================================
+*/

@@ -1,0 +1,64 @@
+/*
+=========================
+       LANDING.CSS
+- LANDING PAGE SPECIFIC -
+
+ABOUT-HERO, P
+PROJECT-CATEGORY
+PROJECT-CARD, STRONG, P
+PROJECT FOOTER, A
+BLOCKQUOTE
+=========================
+*/
+
+#about.about-hero {
+  line-height: 1.65;
+}
+
+#about.about-hero p:first-letter {
+  font-size: 120%;
+  font-weight: bold;
+}
+
+.project-category {
+  display: block;
+  font-size: 0.9em;
+  margin-bottom: 0.4em;
+}
+
+.project-card {
+  margin-bottom: 1.2em;
+}
+
+.project-card strong {
+  font-size: 1.1em;
+  display: block;
+}
+
+
+.project-card p {
+  margin: 0.5em 0;
+  font-size: 0.95em;
+  line-height: 1.4;
+  text-align: justify;
+  hyphens: auto;
+}
+
+.project-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 0.8em;
+}
+
+.project-footer a {
+  display: inline-block;
+  padding: 5px 13px;
+}
+
+blockquote {
+  margin: 1em 0;
+  padding-left: 1em;
+  font-style: italic;
+}

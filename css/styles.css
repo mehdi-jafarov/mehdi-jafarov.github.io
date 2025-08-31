@@ -1,0 +1,104 @@
+/* 
+========== STYLES.CSS ==========
+=   MASTER STYLESHEET FILE    =
+=   IMPORTS ALL CSS FILES     =
+================================
+*/
+
+
+/* 1. Base Styles                        */
+@import url("./base.css");
+
+/* 2. Reusable Components                */
+@import url("./components.css");
+
+/* 3. Layout styles                      */
+@import url("./layout.css");
+
+/* 4. Landing Page Styles                */
+@import url("./landing.css");
+
+/* 5. Loan Demo Page Styles              */
+@import url("./loan-demo.css");
+
+/* 6. Landing Page Responsiveness        */
+@import url("./responsive-landing.css");
+
+/* 7. Loan Demo Page Responsiveness      */
+@import url("./responsive-loan.css");
+
+/* 8. Light Theme Colors                 */
+@import url("./colors-light.css");
+
+/* 9. Dark Theme Colors                  */
+@import url("./colors-dark.css");
+
+/* 10. Theming Styles                    */
+@import url("./theming.css");
+
+/* 
+======== DESCRIPTIONS ==========
+
+======== 1. BASE.CSS ===========
+= GLOBAL STRUCTURE TYPOGRAPHY  = 
+
+GLOBAL RESET
+HTML SMOOTH SCROLL
+BODY
+MAIN
+H1 H2 H3
+A    
+
+====== 2. COMPONENTS.CSS =======
+=     RESUSABLE COMPONENTS     =
+
+ABOUT P
+CARD
+TAGS TAG
+INPUT SELECT
+BUTTONS, .BUTTON, <BUTTON>
+LINKS UL, LI, A 
+NAV-LINKS UL, LI, A 
+
+======== 3. LAYOUT.CSS =========
+=     STRUCTURAL ELEMENTS      =
+
+NAVBAR, UL, .BUTTON, 
+SECTION
+HR
+FOOTER, P
+
+======== 4. LANDING.CSS =========
+=     LANDING PAGE SPECIFIC     =
+
+ABOUT-CONTAINER
+PREDICTION FORM, .BUTTON, .STATUS
+
+======= 5. LOAN-DEMO.CSS ========
+=      LOAN PAGE SPECIFIC       =
+
+ABOUT
+PREDICTION FORM
+
+=== 6. RESPONSIVE-LANDING.CSS ===
+=  LANDING PAGE RESPONSIVENESS  =
+
+
+==== 7. RESPONSIVE-LOAN.CSS =====
+= LOAN DEMO PAGE RESPONSIVENESS = 
+
+
+===== 8. COLORS-LIGHT.CSS =======
+= LIGHT THEME COLOR VARIABLES   =
+
+
+===== 9. COLORS-DARK.CSS ========
+= DARK THEME COLOR VARIABLES    =
+
+
+======== 10. THEMING.CSS ========
+=        THEMING FOR ALL        =
+
+=================================
+=================================
+*/

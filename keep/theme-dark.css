@@ -1,0 +1,135 @@
+/*
+======================
+    THEME-DARK.CSS
+- DARK THEME FOR ALL - 
+
+======================
+*/
+
+/* LOAN  */
+/* --- Dark Mode --- */
+@media (prefers-color-scheme: dark) {
+  /* body {
+    background: #1b1a17; 
+    color: #e5e3dd;
+  } */
+
+  /* hr { border-top: 1px solid #2c2c2c; } */
+  /* h1, h2, h3 { color: #f3f2ec; } */
+  /* aside, blockquote { color: #a5a59c; } */
+
+  /* #prediction-form {
+    background: #22211d;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  } */
+
+  /* #prediction-form input,
+  #prediction-form select {
+    background-color: #3a3934;
+    color: #e5e3dd;
+    border: 1px solid #4a4943;
+  } */
+
+  /* #prediction-form button {
+    background: #4a4943;
+    color: #e5e3dd;
+  }
+  #prediction-form button:hover {
+    background: #5a5952;
+    border: 1px solid #22211d;
+  } */
+
+  /* .navbar {
+    background: #1b1a17;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  } */
+  /* .navbar a { color: #e5e3dd; } */
+  /* .navbar a:hover { color: #9bcaf2; } */
+  /* .navbar .nav-button {
+    background: #4a4943;
+    color: #e5e3dd;
+  } */
+  /* .navbar .nav-button:hover {
+    background: #5a5952;
+    border: 1px solid #22211d;
+    color: #e5e3dd;
+  } */
+}
+/* 
+/* LANDING */
+/* --- DARK MODE --- */
+/* @media (prefers-color-scheme: dark) {
+  body {
+    background: #1b1a17;
+    color: #e5e3dd;
+  }
+
+  hr {
+    border-top: 1px solid #2c2c2c;
+  }
+
+  h1, h2, h3 {
+    color: #f3f2ec;
+  }
+
+  aside, blockquote, .project-category {
+    color: #a5a59c;
+  }
+
+  .project-card {
+    background: #22211d;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  .project-card:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
+  }
+
+  .project-footer .button {
+    background: #4a4943;
+    color: #e5e3dd;
+  }
+
+  .project-footer .button:hover {
+    background: #5a5952;
+    border: 1px solid #22211d;
+  }
+
+  .tag {
+    background: #3a3934;
+    color: #dcd8d0;
+  }
+
+  a {
+    color: #6daee6;
+  }
+
+  a:hover {
+    color: #9bcaf2;
+    text-decoration: none;
+  }
+
+  .navbar {
+    background: #1b1a17;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .navbar a {
+    color: #e5e3dd;
+  }
+
+  .navbar a:hover {
+    color: #9bcaf2;
+  }
+
+  .navbar .nav-button {
+    background: #4a4943;
+    color: #e5e3dd;
+  }
+
+  .navbar .nav-button:hover {
+    background: #5a5952;
+    border: 1px solid #22211d;
+    color: #e5e3dd;
+  }
+} */

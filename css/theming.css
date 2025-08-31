@@ -1,0 +1,88 @@
+/* 
+===================
+    THEMING.CSS
+- THEMING FOR ALL - 
+===================
+*/
+
+/* Theming for base.css */
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+h1, h2, h3 {
+    color: var(--text-primary);
+}
+
+/* Theming for components.css*/
+.card {
+    background-color: var(--bg-card);
+    box-shadow: var(--hadow-card);
+}
+
+.card:hover {
+    box-shadow: var(--shadow-card-hover);
+}
+
+.tag {
+    background-color: var(--bg-surface);
+    color: var(--text-tag);
+}
+
+input, select {
+    background-color: var(--bg-surface);
+    border: var(--border-input)
+}
+
+.button, button {
+    background-color: var(--bg-button);
+    color: var(--text-primary);
+}
+
+.buttons a:hover,
+.navbar .button:hover,
+.button:hover {
+    background-color: var(--bg-button-hover);
+    border: var(--border-button-hover);
+}
+
+.links a {
+     color:  var(--text-link);
+}
+
+.links a:hover{
+     color: var(--text-link-hover);
+}
+
+/* Theming for layout.css */
+.navbar {
+    background-color: var(--bg-primary);
+    border-bottom: var(--border-navbar);
+}
+
+.nav-links a {
+    color: var(--text-primary);
+}
+
+.nav-links a:hover {
+     color: var(--text-link-hover);
+}
+
+
+hr {
+    border-top: var(--border-hr);
+}
+
+footer p {
+    color: var(--text-footer);
+}
+
+blockquote {
+    color: var(--text-blockquote);
+}
+
+/* Theming for landing.css */
+.project-category {
+    color: var(--text-project-category);
+}

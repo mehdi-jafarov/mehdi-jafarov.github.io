@@ -1,0 +1,48 @@
+/*
+===============================
+           BASE.CSS 
+- GLOBAL STRUCTURE TYPOGRAPHY -
+
+GLOBAL RESET
+HTML SMOOTH SCROLL
+BODY
+MAIN
+H1 H2 H3
+A   
+===============================
+ */
+
+/* --- Global Reset --- */
+*,
+*::before, *::after {
+    box-sizing: border-box;
+}
+
+/* --- Smooth Scroll --- */
+html { scroll-behavior: smooth; }
+
+/* --- Body --- */
+body {
+  /* body structure */
+  margin: 0 auto;
+  max-width: 650px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 0 20px;
+
+  /* body typography */
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+main { flex: 1; }  /* keep footer at bottom */
+
+h1, h2, h3 {
+  line-height: 1.2;
+}
+
+a {
+     text-decoration: none;
+}

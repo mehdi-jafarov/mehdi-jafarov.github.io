@@ -1,0 +1,58 @@
+/*
+======================= 
+      LAYOUT.CSS
+- STRUCTURAL ELEMENTS -
+
+NAVBAR, UL, .BUTTON
+SECTION
+HR
+FOOTER, P
+=======================
+*/
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6em 1em;
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1.5em;
+  align-items: center;
+}
+
+.navbar .button {
+  padding: 5px 10px;
+}
+
+.nav-links a {
+  transition: color 0.2s ease;
+}
+
+section {
+  margin-top: 2em;
+  padding-bottom: 0.1em;
+}
+
+hr {
+  border: none;
+  margin: 1em 0;
+  max-width: 650px;
+}
+
+footer {
+  margin-top: auto;
+}
+
+footer p {
+  font-size: 0.85em;
+  margin: 0;
+}
