@@ -32,7 +32,8 @@ h1, h2, h3 {
 
 input, select {
     background-color: var(--bg-surface);
-    border: var(--border-input)
+    border: var(--border-input);
+    color: var(--text-primary);
 }
 
 .button, button {

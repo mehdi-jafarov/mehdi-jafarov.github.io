@@ -32,8 +32,8 @@
         --border-button-hover: 1px solid #22211d;
 
         /* Shadow */
-        --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.1);
-        --shadow-card-hover: 0 6px 16px rgba(0, 0, 0, 0.14);
+        --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.3);
+        --shadow-card-hover: 0 6px 16px rgba(0, 0, 0, 0.6);
     }
 }
 
