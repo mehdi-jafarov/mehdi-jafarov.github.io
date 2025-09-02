@@ -50,6 +50,77 @@
       <span class="status" id="status">Status</span>
     </form>
   </section>
+  
+  <hr>
+
+  <section id="info-model" class="text-block">
+    <h2>How the Model Works</h2>
+    <p>
+      The deployed model uses historical SBA loan data to predict loan approvals. For this demo, we intentionally limited input features to highlight key patterns. Among these, industry type strongly influences defaults, so we engineered a binary feature: "Real Estate Company?" Businesses are classified as real estate or non-real estate, reflecting historical trends where real-estate-backed loans carry lower default risk.
+    </p>
+  </section>
+  
+
+  <hr>
+
+  <!--
+  <section id="about-project" class="text-block">
+    <h2>About the Project</h2>
+    <p>
+      This interactive demo is part of the larger SBA Loan Default Prediction project, which explores how machine learning can forecast loan defaults. Inspired by the article "Should This Loan Be Approved or Denied?", the project demonstrates end-to-end development:
+    </p>
+    <ul class="list">
+      <li>
+        Identifying indicators of potential risk
+      </li>
+      <li>
+        Building and validating a logistic regression model
+      </li>
+      <li>
+        Applying the model to make lending decisions
+      </li>
+    </ul>
+    <p class="links">
+      Explore the full project on 
+      
+      <a href="https://github.com/mehdi-jafarov/SBA-Default-Risk-Prediction.git">GitHub</a>.
+    </p>
+  </section>
+  <hr>
+   -->
+
+  <section id="model-specs">
+    <h2>Model Specs & Performance</h2>
+      <table class="table">
+        <tbody>
+          <tr>
+            <th>Model Type</th>
+            <td>Logistic Regression</td>
+          </tr>
+          <tr>
+            <th>Dataset</th>
+            <td>SBA Case</td>
+          </tr>
+          <tr>
+            <th>Input Features</th>
+            <td>Portion (Loan amount / SBA portion), Recession (Set to False), "Real Estate Company?" flag</td>
+          </tr>
+          <tr>
+            <th>Performance</th>
+            <td>~72 AUC</td>
+          </tr>
+          <tr>
+            <th>Objective</th>
+            <td>Demonstrate predictive analytics</td>
+          </tr>
+          <tr>
+            <th>Limitations</th>
+            <td>Simplified model trained on limited features</td>
+          </tr>
+        </tbody>
+      </table>
+  </section>
+
 </main>
 
 <footer>
