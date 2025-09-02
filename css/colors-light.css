@@ -29,6 +29,7 @@
         --border-navbar: 1px solid rgba(0, 0, 0, 0.08);
         --border-input: 1px solid #dcd8d0;
         --border-hr: 1px solid #ccc;
+        --border-table: 1px solid #ccc;                        
         --border-button-hover: 1px solid #fdfcf8;
 
         /* Shadow */
@@ -67,6 +68,7 @@ Border
     --border-navbar: 1px solid rgba(0, 0, 0, 0.08);      navbar
     --border-input: 1px solid #dcd8d0;                   input
     --border-hr: 1px solid #ccc;                         hr
+    --border-table: 1px solid #ccc;                      table
 
     Border Hover
     --border-button-hover: 1px solid #fdfcf8;            button

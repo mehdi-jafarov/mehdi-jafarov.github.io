@@ -3,7 +3,7 @@
       COMPONENTS.CSS
 -  REUSABLE COMPONENTS   -
 
-ABOUT P
+TEXT-JUSTIFY P
 CARD
 TAGS TAG
 INPUT SELECT
@@ -13,9 +13,19 @@ NAV-LINKS UL, LI, A
 ========================== 
 */
 
-#about p {
+.text-block {
+     width: 100%;
+}
+
+.text-block p {
      text-align: justify;
      hyphens: auto;
+}
+
+.note-block p {
+     font-size: 0.8em;
+     font-family: monospace;
+     text-align: left;
 }
 
 .card {
@@ -61,12 +71,32 @@ input, select {
      cursor: pointer;
 }
 
-.links ul {
-     list-style: disc;
+
+.table {
+     font-family: monospace;
+     font-size: 0.8em;
+     border-collapse: collapse;
+     margin: 2em 0;
+     width: 100%;
 }
 
-.links li {
+.table th, .table td {
+     text-align: left;
+     padding: 0.5em;
+}
+
+.table th {
+  width: 25%;
+  border-radius: 0.5em;
+}
+
+
+.list li {
      margin-bottom: 0.5em;
+}
+
+.list-links ul {
+     list-style: disc;
 }
 
 .links a {

@@ -34,7 +34,7 @@ body {
   /* body typography */
   font-family: "Times New Roman", Times, serif;
   font-size: 20px;
-  line-height: 1.5;
+  line-height: 1.4;
 }
 
 main { flex: 1; }  /* keep footer at bottom */

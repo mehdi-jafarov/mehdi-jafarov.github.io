@@ -29,6 +29,7 @@
         --border-navbar: 1px solid rgba(255, 255, 255, 0.05);
         --border-input: 1px solid #4a4943;
         --border-hr: 1px solid #2c2c2c;
+        --border-table: 1px solid #ccc;
         --border-button-hover: 1px solid #22211d;
 
         /* Shadow */
@@ -38,9 +39,9 @@
 }
 
 /* 
-==============================================================
+==================================================================
             DARK THEME COLOR VARIABLES DESCRIPTIONS
-==============================================================
+==================================================================
                             Original
 
 Background
@@ -68,6 +69,7 @@ Border
     --border-navbar: 1px solid rgba(255, 255, 255, 0.05);   navbar
     --border-input: 1px solid #4a4943;                      input
     --border-hr: 1px solid #2c2c2c;                         hr
+    --border-table: 1px solid #ccc;                         table
 
     Border Hover
     --border-button-hover: #fdfcf8;                         button
@@ -78,5 +80,5 @@ Shadow
     Shadow Hover
     --shadow-card-hover: 0 6px 16px rgba(0, 0, 0, 0.14);    Card
 
-==============================================================
+==================================================================
 */

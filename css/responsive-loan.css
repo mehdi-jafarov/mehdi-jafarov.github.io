@@ -20,11 +20,11 @@
   h1 { font-size: 1.8em; }
   h2 { font-size: 1.3em; }
 
-  #about-container {
+  #model-demo {
     grid-template-columns: 1fr;
-    gap: 0.1em;
+    gap: 0em;
   }
-
+  
   #prediction-form {
     flex-direction: column;
     gap: 0.9em;
@@ -46,6 +46,7 @@
   }
 }
 
+
 /* --- Medium 481px–660px --- */
 @media (min-width: 481px) and (max-width: 660px) {
   body {
@@ -59,9 +60,9 @@
   h1 { font-size: 1.8em; }
   h2 { font-size: 1.3em; }
 
-  #about-container {
+  #model-demo {
     grid-template-columns: 1fr;
-    gap: 0.5em;
+    gap: 0;
   }
 
   #prediction-form {

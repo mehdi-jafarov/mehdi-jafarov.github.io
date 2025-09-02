@@ -8,7 +8,7 @@ PREDICTION FORM, .BUTTON, .STATUS
 =================================
 */
 
-#about-container {
+#model-demo {
   display: grid;
   grid-template-columns: 1fr 220px; /* text + card */
   gap: 1.5em;

@@ -16,6 +16,14 @@ h1, h2, h3 {
 }
 
 /* Theming for components.css*/
+.table th, .table td {
+    border-bottom: var(--border-table);
+}
+
+.table th {
+    background-color: var(--bg-card);
+}
+
 .card {
     background-color: var(--bg-card);
     box-shadow: var(--shadow-card);

@@ -10,183 +10,103 @@
   <link rel="stylesheet" href="../css/styles.css">
   <link rel="shortcut icon" href="../img/favicon.svg" type="image/x-icon">
 
-  <!-- Onnx Runtime Link -->
+  <!-- Scripts -->
+  <script src="../scripts/predictor.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/ort.min.js"></script>
 </head>
 <body>
+  <!-- Navbar -->
   <nav class="navbar">
+
+    <!-- Navigation links -->
     <div class="nav-links">
       <ul>
-        <li><a href="https://mehdi-jafarov.github.io/#">Home</a></li>
-        <li><a href="https://mehdi-jafarov.github.io/#projects">Work</a></li>
-        <li><a href="https://mehdi-jafarov.github.io/#contact">Contact</a></li>
+        <li>
+          <a href="https://mehdi-jafarov.github.io/#">
+          Home
+          </a>
+        </li>
+        <li>
+          <a href="https://mehdi-jafarov.github.io/#projects">
+          Work
+          </a>
+        </li>
+        <li>
+          <a href="https://mehdi-jafarov.github.io/#contact">
+          Contact
+          </a>
+        </li>
       </ul>
     </div>
+    <!-- / Navigation Links -->
+
+    <!-- Nav Button -->
     <div class="nav-action">
       <a class="button" href="https://github.com/mehdi-jafarov/SBA-Default-Risk-Prediction.git" target="_blank">
         GitHub Repo
       </a>
     </div>
   </nav>
-<main role="main">
-  <h1>Try It Yourself</h1>
-
-  <section id="about-container">
-    <div id="about">
-      <p>
-        This model is a simplified demonstration, not a production-level system. It was built for practice and to showcase predictive analytics. In this case, the model tends to favor loans secured by real estate, as historical SBA data suggested such loans carried lower risk. The goal here is to highlight the process of building and applying a predictive model, rather than to provide final, deployable decisions.
-      </p>
-    </div>
-
-    <form id="prediction-form" class="card">
-      <input id="loanAmt" type="number" placeholder="Loan Amount Requested" step="0.01">
-      <input id="sbaPortion" type="number" placeholder="SBA Guaranteed Portion" step="0.01">
-      <select style="cursor: pointer;" id="realEstate">
-        <option value="">Industry</option>
-        <option value="1">Real Estate</option>
-        <option value="0">Other</option>
-      </select>
-      <button class="button" type="submit">Predict</button>
-      <span class="status" id="status">Status</span>
-    </form>
-  </section>
+  <!-- / Navbar -->
   
-  <hr>
+  <main role="main">
+    <h1>Try It Yourself</h1>
 
-  <section id="info-model" class="text-block">
-    <h2>How the Model Works</h2>
-    <p>
-      The deployed model uses historical SBA loan data to predict loan approvals. For this demo, we intentionally limited input features to highlight key patterns. Among these, industry type strongly influences defaults, so we engineered a binary feature: "Real Estate Company?" Businesses are classified as real estate or non-real estate, reflecting historical trends where real-estate-backed loans carry lower default risk.
-    </p>
-  </section>
-  
+    <!-- Demo Section -->
+    <section id="model-demo">
+      <!-- Demo Text -->
+      <div class="intro-model text-block">
+        <p>
+          This interactive model demonstrates predictive analytics using historical SBA loan data. Built for practice with limited features, it tends to favor real-estate-backed loans, reflecting historical lower-risk patterns.
+        </p>
+        <p class="links">
+          The model is part of my 
+          <a href="https://github.com/mehdi-jafarov/SBA-Default-Risk-Prediction.git">
+            SBA Loan Default Risk Prediction
+          </a>
+          project, which was inspired by the article
+          <a href="https://doi.org/10.1080/10691898.2018.1434342">
+            <em>Should This Loan Be Approved or Denied?</em>
+          </a>.
+        </p>
 
-  <hr>
+        <!-- Demo Note -->
+        <div class="note-block">
+          <p><em>
+            Denies: $100.000, $40.000, Other<br>
+            Approves: $100.000, $20.000, Real Estate
+          </em></p>
+        </div>
+      </div>
+      <!-- / Demo Text -->
 
-  <!--
-  <section id="about-project" class="text-block">
-    <h2>About the Project</h2>
-    <p>
-      This interactive demo is part of the larger SBA Loan Default Prediction project, which explores how machine learning can forecast loan defaults. Inspired by the article "Should This Loan Be Approved or Denied?", the project demonstrates end-to-end development:
-    </p>
-    <ul class="list">
-      <li>
-        Identifying indicators of potential risk
-      </li>
-      <li>
-        Building and validating a logistic regression model
-      </li>
-      <li>
-        Applying the model to make lending decisions
-      </li>
-    </ul>
-    <p class="links">
-      Explore the full project on 
-      
-      <a href="https://github.com/mehdi-jafarov/SBA-Default-Risk-Prediction.git">GitHub</a>.
-    </p>
-  </section>
-  <hr>
-   -->
+      <!-- Form -->
+      <form id="prediction-form" class="card">
+        <!-- Inputs -->
+        <input id="loanAmt" type="number" placeholder="Loan Amount Requested" step="0.01">
+        <input id="sbaPortion" type="number" placeholder="SBA Guaranteed Portion" step="0.01">
 
-  <section id="model-specs">
-    <h2>Model Specs & Performance</h2>
-      <table class="table">
-        <tbody>
-          <tr>
-            <th>Model Type</th>
-            <td>Logistic Regression</td>
-          </tr>
-          <tr>
-            <th>Dataset</th>
-            <td>SBA Case</td>
-          </tr>
-          <tr>
-            <th>Input Features</th>
-            <td>Portion (Loan amount / SBA portion), Recession (Set to False), "Real Estate Company?" flag</td>
-          </tr>
-          <tr>
-            <th>Performance</th>
-            <td>~72 AUC</td>
-          </tr>
-          <tr>
-            <th>Objective</th>
-            <td>Demonstrate predictive analytics</td>
-          </tr>
-          <tr>
-            <th>Limitations</th>
-            <td>Simplified model trained on limited features</td>
-          </tr>
-        </tbody>
-      </table>
-  </section>
+        <!-- Select -->
+        <select style="cursor: pointer;" id="realEstate">
+          <option value="">Industry</option>
+          <option value="1">Real Estate</option>
+          <option value="0">Other</option>
+        </select>
 
-</main>
+        <!-- Button - Status -->
+        <button class="button" type="submit">Predict</button>
+        <span class="status" id="status">Status</span>
+      </form>
+      <!-- / Form -->
+
+    </section>
+    <!--/ Demo Section -->
+  </main>
 
 <footer>
   <hr>
   <p style="font-size: 0.85em; color: #777;">© 2025 Mehdi Jafarov</p>
 </footer>
 
-<script>
-const form = document.getElementById("prediction-form");
-const statusEl = document.getElementById("status");
-let session;
-
-// Load ONNX model
-(async () => {
-  try {
-    session = await ort.InferenceSession.create("../models/sba-sk-logreg.onnx");
-    console.log("ONNX model loaded");
-  } catch (err) {
-    console.error("Failed to load ONNX model:", err);
-    statusEl.innerText = "Load Failed";
-  }
-})();
-
-form.addEventListener("submit", async (e) => {
-  e.preventDefault();
-
-  // Parse input numbers and remove any $ or commas
-  const loanAmt = parseFloat(document.getElementById("loanAmt").value.replace(/[$,]/g,""));
-  const sbaPortion = parseFloat(document.getElementById("sbaPortion").value.replace(/[$,]/g,""));
-  const realEstate = parseInt(document.getElementById("realEstate").value);
-
-  if (isNaN(loanAmt) || isNaN(sbaPortion) || ![0,1].includes(realEstate) || loanAmt === 0) {
-    statusEl.innerText = "Invalid Values";
-    return;
-  }
-
-  // Compute Portion and recession
-  const portion = sbaPortion / loanAmt;
-  const recession = 0.0;
-
-  // DEBUG: log inputs
-  console.log("=== DEBUG INPUTS ===");
-  console.log("Loan Amount:", loanAmt);
-  console.log("SBA Portion:", sbaPortion);
-  console.log("RealEstate:", realEstate);
-  console.log("Portion:", portion);
-  console.log("Recession:", recession);
-
-  // Prepare input tensor
-  const feeds = {
-    float_input: new ort.Tensor("float32", Float32Array.from([realEstate, portion, recession]), [1,3])
-  };
-
-  try {
-    const results = await session.run(feeds);
-    const outputKey = Object.keys(results)[0];
-    const label = Number(results[outputKey].data[0]); // Read class label directly
-    console.log("Predicted class label:", label);
-
-    // Only show Approved or Denied
-    statusEl.innerText = label === 0 ? "Approved" : "Denied";
-  } catch (err) {
-    console.error("ONNX inference error:", err);
-    statusEl.innerText = "Inference failed";
-  }
-});
-</script>
 </body>
 </html>
