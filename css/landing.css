@@ -11,13 +11,8 @@ BLOCKQUOTE
 =========================
 */
 
-#about-hero.info-hero {
+#about-hero p {
   line-height: 1.65;
-}
-
-#about-hero.info-hero p:first-letter {
-  font-size: 120%;
-  font-weight: bold;
 }
 
 .project-category {

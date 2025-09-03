@@ -39,10 +39,6 @@ body {
 
 main { flex: 1; }  /* keep footer at bottom */
 
-h1, h2, h3 {
-  line-height: 1.2;
-}
-
 a {
      text-decoration: none;
 }
