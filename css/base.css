@@ -39,6 +39,10 @@ body {
 
 main { flex: 1; }  /* keep footer at bottom */
 
+h1 {
+  font-size: 1.8em;
+}
+
 a {
      text-decoration: none;
 }

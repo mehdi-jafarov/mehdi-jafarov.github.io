@@ -17,18 +17,34 @@
     font-size: clamp(16px, 4vw, 20px);
   }
 
-  h1 { font-size: 1.8em; }
   h2 { font-size: 1.3em; }
 
   #model-demo {
     grid-template-columns: 1fr;
     gap: 0em;
   }
+
+  .intro-model {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .note-block {
+    order: -1;
+  }
   
   #prediction-form {
     flex-direction: column;
     gap: 0.9em;
     max-width: 100%;
+  }
+
+  #prediction-form {
+    order: 1;
+  }
+
+  .intro-model {
+    order: 2;
   }
 
   .navbar ul { gap: 0.8em; }
@@ -57,12 +73,26 @@
     font-size: clamp(16px, 4vw, 20px);
   }
 
-  h1 { font-size: 1.8em; }
-  h2 { font-size: 1.3em; }
-
   #model-demo {
     grid-template-columns: 1fr;
-    gap: 0;
+    gap: 1em;
+  }
+
+  .intro-model {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .note-block {
+    order: -1;
+  }
+
+   #prediction-form {
+    order: 1;
+  }
+
+  .intro-model {
+    order: 2;
   }
 
   #prediction-form {
