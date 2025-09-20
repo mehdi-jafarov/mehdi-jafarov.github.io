@@ -55,13 +55,12 @@ input, select {
      font-size: 0.7em;
 }
 
-.button-cont {
+.buttons {
      display: flex;
      gap: 10px;
 }
 
-.buttons a,
-.buttons button {
+.button, button {
      transition: background 0.2s ease, border 0.2s ease;
      font-family: monospace;
      font-size: 0.85em;
@@ -72,17 +71,6 @@ input, select {
      cursor: pointer;
 }
 
-.list li {
-     margin-bottom: 0.5em;
-}
-
-.list-links ul {
-     list-style: disc;
-}
-
-.links a {
-     transition: color 0.2s ease;
-}
 
 .table {
      font-family: monospace;
@@ -100,4 +88,17 @@ input, select {
 .table th {
   width: 25%;
   border-radius: 0.5em;
+}
+
+
+.list li {
+     margin-bottom: 0.5em;
+}
+
+.list-links ul {
+     list-style: disc;
+}
+
+.links a {
+     transition: color 0.2s ease;
 }

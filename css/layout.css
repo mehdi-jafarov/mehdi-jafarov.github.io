@@ -29,7 +29,7 @@ FOOTER, P
   align-items: center;
 }
 
-.nav-action a {
+.navbar .button {
   padding: 5px 10px;
 }
 
