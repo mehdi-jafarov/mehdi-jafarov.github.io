@@ -44,14 +44,14 @@ input, select {
     color: var(--text-primary);
 }
 
-.button, button {
+.buttons a,
+.buttons button {
     background-color: var(--bg-button);
     color: var(--text-primary);
 }
 
 .buttons a:hover,
-.navbar .button:hover,
-.button:hover {
+.buttons button:hover {
     background-color: var(--bg-button-hover);
     border: var(--border-button-hover);
 }
