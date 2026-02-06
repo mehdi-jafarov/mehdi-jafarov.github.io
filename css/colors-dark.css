@@ -6,8 +6,7 @@
 
 */
 
-@media (prefers-color-scheme: dark) {
-    :root {
+:root {
         /* Background */
         --bg-primary: #1b1a17;       /* Body, navbar */
         --bg-card: #22211d;          /* Card background */
@@ -35,7 +34,6 @@
         /* Shadow */
         --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.3);
         --shadow-card-hover: 0 6px 16px rgba(0, 0, 0, 0.6);
-    }
 }
 
 /* 

@@ -5,7 +5,6 @@
 ================================
 */
 
-
 /* 1. Base Styles                        */
 @import url("./base.css");
 
@@ -28,7 +27,7 @@
 @import url("./responsive-loan.css");
 
 /* 8. Light Theme Colors                 */
-@import url("./colors-light.css");
+/* @import url("./colors-light.css"); */
 
 /* 9. Dark Theme Colors                  */
 @import url("./colors-dark.css");
